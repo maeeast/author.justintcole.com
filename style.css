@@ -1,26 +1,66 @@
-body {
+/* Base layout and global styles */
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: sans-serif;
   background: #f5f5f5;
 }
 
-header {
-  background: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
+/* Page structure */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
+  flex: 1;
   padding: 1em;
 }
 
+main {
+  flex: 1;
+  padding: 0 1em;
+}
+
+/* Header and Footer */
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer {
+  font-size: 0.9em;
+  margin-top: auto;
+}
+
+.footer-icons {
+  margin-top: 0.5em;
+}
+
+.footer-icons a {
+  margin: 0 0.5em;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.footer-icons a:hover {
+  color: #aaa;
+}
+
+/* Sidebar navigation */
 .sidebar {
   width: 200px;
 }
 
-.sidebar ul {
+.sidebar ul,
+.rightbar ul {
   list-style: none;
   padding: 0;
 }
@@ -36,31 +76,49 @@ header {
   background: #ddd;
 }
 
-main {
-  flex: 1;
-  padding: 0 1em;
-}
-
-.rightbar {
-  width: 200px;
-  padding-left: 1em;
-}
-
-.rightbar ul {
+/* Contact page custom list styles */
+.contact-links {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-.rightbar a {
-  text-decoration: none;
-  color: #007acc;
+.contact-links li {
+  margin-bottom: 0.5em;
 }
 
+/* Book layout with Flexbox */
+.book-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.book-main {
+  flex: 1;
+}
+
+.dynamic-buy-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .book-layout {
+    flex-direction: column;
+  }
+
+  .dynamic-buy-sidebar {
+    width: 100%;
+  }
+}
+
+/* Book page elements */
 .book-cover {
   max-width: 200px;
   float: left;
   margin: 0 1.5em 1em 0;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .book-intro::after {
@@ -82,7 +140,10 @@ blockquote {
   border-left: 5px solid #ccc;
   font-style: italic;
 }
-.about-highlight {
+
+/* Highlight boxes */
+.about-highlight,
+.home-highlight {
   background-color: #f9f9f9;
   padding: 1em;
   border-left: 5px solid #555;
@@ -90,6 +151,7 @@ blockquote {
   border-radius: 4px;
 }
 
-.about-highlight h3 {
+.about-highlight h3,
+.home-highlight h3 {
   margin-top: 0;
 }
