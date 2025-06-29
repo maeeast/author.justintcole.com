@@ -3,36 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <title>Justin T. Cole - Author</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Justin T. Cole - Author</h1>
-  </header>
-  <div class="container">
-    <nav class="sidebar">
-      <ul>
-        <li><a href="home" data-page="home">Home</a></li>
-        <li><a href="about" data-page="about">About the Author</a></li>
-        <li><a href="samplebook-book" data-page="samplebook-book">Sample Book</a></li>
-        <li><a href="contact" data-page="contact">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="site-wrapper">
+    <header>
+      <h1>Justin T. Cole - Author</h1>
+    </header>
 
-    <main id="main-content">
-      <!-- Content from pages/home.html loads here -->
-    </main>
+    <div class="container">
+      <nav class="sidebar">
+        <ul>
+          <li><a href="home" data-page="home">Home</a></li>
+          <li><a href="about" data-page="about">About the Author</a></li>
+          <li><a href="samplebook-book" data-page="samplebook-book">Sample Book</a></li>
+          <li><a href="contact" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <aside class="rightbar" id="buy-sidebar" style="display: none;">
-      <h3>Where to Buy</h3>
-      <ul>
-        <li><a href="#">Amazon</a></li>
-        <li><a href="#">Barnes & Noble</a></li>
-        <li><a href="#">Books-A-Million</a></li>
-      </ul>
-    </aside>
+      <main id="main-content">
+        <!-- Dynamic content loads here -->
+      </main>
+    </div>
+
+    <footer>
+      <p><strong>Justin T. Cole – Author</strong></p>
+      <p>PO Box info here</p>
+      <div class="footer-icons">
+        <a href="https://instagram.com/justintcole" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/justintcole" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://goodreads.com/justintcole" target="_blank"><i class="fab fa-goodreads-g"></i></a>
+      </div>
+    </footer>
   </div>
 
   <script src="script.js"></script>
